@@ -6,18 +6,19 @@
   </head>
   <body>
 	<div id='app'>
-		<ul id='message'>
+		<ul id='message' v-chat-scroll>
 			<li v-for='message in messages'>
 				{{message}}
 			</li>
 		</ul>
-		<form id='form' action="">
-			<input type="text" id='input' autocomplete='off'><button>send</button>
-		</form>
+		<div class='container'>
+			<input type="text" v-model='input' v-on:keyup='sendMessage'><button v-on:click='sendMessage'>send</button>
+		</div>
 	</div>
 
 	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
 	<script src='socket.io/socket.io.js'></script>
+	<script src='javascripts/vue_plugins.js'></script>
 	<script src='javascripts/socketapi.js'></script>
   </body>
 </html>

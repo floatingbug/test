@@ -1,8 +1,50 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+	font: 20px "Lucida Grande", Helvetica, Arial, sans-serif;
+	padding: 0;
+	margin: 0;
 }
 
 a {
   color: #00B7FF;
+}
+
+.container{
+	background: black;
+	padding: 3px;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 8%;
+	box-sizing: border-box;
+	display: flex;
+}
+
+.container input{
+	width: 75%;
+}
+
+.container button{
+	width: 25%;
+}
+
+ul{
+	position: fixed;
+	margin: 0;
+	padding: 0;
+	height: 92%;
+	width: 75%;
+	background: grey;
+	overflow: scroll;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+ul::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+}
+
+input{
+	font-size: 20px;
 }

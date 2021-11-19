@@ -5,6 +5,9 @@ const socketapi = {
 
 io.on('connection', (socket)=>{
 	console.log("User connected")
+	socket.on('cli_msg', (msg)=>{
+		io.emit('srv_msg', msg)
+	})
 })
 
 
